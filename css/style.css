@@ -5,10 +5,18 @@ html, body {
 	font-family: arial, sans-serif;
 }
 
-body { 
+#wrapper {
+	height: 100%;
+}
+
+.results .strona-glowna {
+	display: none;
+}
+
+.strona-glowna {
+	height: 100%;
 	display: flex;
     flex-direction: column;
-    height: 100%;
 }
 
 /* nawigacja */

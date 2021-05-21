@@ -1,0 +1,158 @@
+.strona-wynikow {
+    display: none;
+    height: 100%;
+}
+
+.results .strona-wynikow {
+    display: block;
+}
+
+.results-zaloguj {
+    margin-left: auto;
+}
+
+.wyszukiwarka-wyniki {
+    margin: 0 0 0 50px;
+    max-width: 700px;
+}
+
+.wyszukiwarka-wyniki .wyszukiwarka-szukaj {
+    box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
+}
+
+.wyszukiwarka-wyniki .wyszukiwarka-szukaj:hover {
+    box-shadow: 0 2px 8px 1px rgb(64 60 67 / 24%);
+    border-color: rgba(223,225,229,0);
+}
+
+#nav-bar {
+    display: flex;
+    align-items: center;
+}
+
+#option-bar {
+    position: relative;
+    left: 130px;
+    width: 832px;
+    height: 15px;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+#option-bar a {
+    display: flex;
+    align-items: center;
+}
+
+#option-bar li {
+    font-size: 13px;
+    font-family: arial, sans-serif;
+    margin-right: 25px;
+}
+
+#option-bar li img {
+   padding-right: 5px;
+}
+
+
+#option-bar a {
+    text-decoration: none;
+    color: #5f6368;
+}
+
+#search-bar-container {
+    margin-left: 10px;
+}
+
+#google-logo {
+    height: 30px;
+    width: 92px;
+    margin-left: 16px;
+}
+
+#border1 {
+    border-bottom: solid #ebebeb;
+    border-width: 1px;
+    width: 100%;
+}
+
+#magnifying-glass {
+    background-color: transparent;
+    position: relative;
+    left: 642px;
+    bottom: 36px;
+    border-color: transparent;
+    fill: #4285f4;
+}
+
+.icons {
+    position: relative;
+}
+
+h1 {
+    color: #5f6368;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    font-weight: 100;
+}
+
+#main {
+    position: relative;
+    padding-left: 172px;
+    padding-top: 7px;
+}
+
+h4 {
+    font-size: 14px;
+    position: relative;
+    top: 8px;
+    font-family: arial;
+    font-weight: 100;
+}
+
+h2 {
+    font-family: arial;
+    font-weight: 100;
+    font-size: 20px;
+}
+
+h3 {
+    font-family: arial;
+    font-weight: 100;
+    font-size: 14px;
+    width: 600px;
+    color: #4d5156;
+    position: relative;
+    bottom: 10px;
+    line-height: 20px;
+}
+
+#frequent-questions {
+    height: 176.85px;
+    width: 652px;
+    border-radius: 8px;
+    border: 1px solid #dfe1e5;
+    display: flex;
+    flex-direction: column;
+}
+
+#frequent-questions h1 {
+    color: #222;
+    font-size: 20px;
+    line-height: 1.3;
+    padding: 9px 16px;
+    width: 620px;
+    height: 44px;
+    margin: unset;
+}
+
+#frequent-questions h2 {
+    font-size: 16px;
+    position: relative;
+    padding: 14px 16px;
+    line-height: 1;
+    border-top: 1px solid #e5e5e5;
+    position: relative;
+    margin: unset;
+}
