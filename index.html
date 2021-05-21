@@ -8,17 +8,23 @@
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/results.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
 </head>
+
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.esm.browser.js'
+</script>
+
 <body>
-	<div class="results" id="wrapper">
+	<div  v-bind:class="{ results: googleSearch }" id="wrapper">
 		<div class="strona-wynikow">
-			<header>
+			<header> 
 				<div id="nav-bar">
 					<img id="google-logo" alt="Google" height="92" src="./img/logo/googlelogo_color_272x92dp.png" srcset="./img/logo/googlelogo_color_272x92dp1x.png 1x, ./img/logo/googlelogo_color_272x92dp.png 2x" width="272" data-iml="1616849175415" data-atf="1">
 					
 					<div class="wyszukiwarka wyszukiwarka-wyniki">
 						<div class="wyszukiwarka-szukaj">
-							<input />
+							<input ref="szukajka1" @change="onChange" v-model="googleSearch" />
 							<span class="klawiatura"></span>
 							<img class="mikrofon" src="./img/wyszukiwarka/mikrofon.svg"/>
 							<img class="szukajka" src="./img/wyszukiwarka/szukajka.svg" />
@@ -169,7 +175,7 @@
 			<div class="wyszukiwarka">
 				<div class="wyszukiwarka-szukaj">
 					<img class="szukajka" src="./img/wyszukiwarka/szukajka.svg" />
-					<input />
+					<input ref="szukajka" v-model="googleSearch" @change="onChange" />
 					<span class="klawiatura"></span>
 					<img class="mikrofon" src="./img/wyszukiwarka/mikrofon.svg"/>
 				</div>
@@ -221,5 +227,7 @@
 			</footer>
 		</div>
 	</div>
+
+	<script src="./skrypt.js"></script>
 </body>
 </html>
