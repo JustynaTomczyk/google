@@ -22,6 +22,17 @@ const vueApp = new Vue({
                 this.$refs.szukajka.focus()
             }
         },
+        getName: function(el) {
+            let reg = new RegExp(this.googleSearch, "gi");
+            const matches =  el.match(reg);
+            napis  = '';
+
+            matches.forEach(match => {
+                napis = el.replace(reg, `<span class="normal">${el.match(reg)[0]}</span>`);
+            })
+
+            return napis;
+        },
     },
   })
   

@@ -17,11 +17,7 @@
 </script>
 
 <body>
-	<div  v-bind:class="{ results: googleSearch }" id="wrapper">
-		<li v-for="city in filteredCities">
-			{{ city.name }}
-		</li>
-
+	<div  v-bind:class="{ results: googleSearch, autocomplete: filteredCities.length }" id="wrapper">
 		<div class="strona-wynikow">
 			<header> 
 				<div id="nav-bar">
@@ -29,11 +25,21 @@
 					
 					<div class="wyszukiwarka wyszukiwarka-wyniki">
 						<div class="wyszukiwarka-szukaj">
+							<img class="szukajka" src="./img/wyszukiwarka/szukajka.svg" />
 							<input ref="szukajka1" @change="onChange" v-model="googleSearch" />
 							<span class="klawiatura"></span>
 							<img class="mikrofon" src="./img/wyszukiwarka/mikrofon.svg"/>
 							<img class="szukajka" src="./img/wyszukiwarka/szukajka.svg" />
 						</div>
+
+						<ul v-if="filteredCities.length" class="wyszukiwarka-autocomplete">
+							<li v-for="city in filteredCities">
+								<img class="szukajka" src="./img/wyszukiwarka/szukajka.svg" />
+
+								<span v-html="getName(city.name)">
+								</span>
+							</li>
+						</ul>
 					</div>
 
 					<nav class="results-zaloguj">
