@@ -15,13 +15,6 @@ const vueApp = new Vue({
         }
     },
     methods: {
-        onChange: function() {
-            if (this.googleSearch.length > 0) {
-                this.$refs.szukajka1.focus()
-            } else {
-                this.$refs.szukajka.focus()
-            }
-        },
         getName: function(el) {
             let reg = new RegExp(this.googleSearch, "gi");
             const matches =  el.match(reg);
@@ -33,6 +26,15 @@ const vueApp = new Vue({
 
             return napis;
         },
+        goToResults: function() {
+            this.$el.classList.add('results')
+        },
+        goToCity: function(el) {
+            this.$el.classList.add('results')
+            this.googleSearch = el + ' ';
+            this.$refs.szukajka1.value = el;
+            this.$refs.szukajka = el;
+        }
     },
   })
   

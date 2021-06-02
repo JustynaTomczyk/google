@@ -1,6 +1,6 @@
 .strona-wynikow {
     display: none;
-    height: 100%;
+    height: 100vh;
 }
 
 .results .strona-wynikow {
@@ -28,10 +28,14 @@
     box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
 }
 
-.autocomplete .wyszukiwarka-wyniki .wyszukiwarka-szukaj {
+.autocomplete .wyszukiwarka-szukaj {
     border-radius: 0;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
+}
+
+.wyszukiwarka-wyniki .wyszukiwarka-autocomplete {
+    margin: -26px 0 0 0;
 }
 
 .wyszukiwarka-autocomplete {
@@ -41,7 +45,7 @@
 	right: 0;
 	padding: 10px 0;
 	list-style: none;
-	margin: -26px 0 0;
+	margin: 0;
 	background-color: #fff;
     border-radius: calc(0.25 * 44px);
 	border-top-left-radius: 0;
@@ -71,6 +75,10 @@
     padding-inline-start: 12px;
     padding-top: 6px;
     font-weight: 600;
+}
+
+.wyszukiwarka-autocomplete li:hover {
+	background-color: #f2f2f2;
 }
 
 .wyszukiwarka-autocomplete img {
