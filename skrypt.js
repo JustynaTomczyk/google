@@ -1,7 +1,18 @@
 const vueApp = new Vue({
     el: '#wrapper',
     data: { 
-        googleSearch: ''
+        googleSearch: '',
+        cities: window.cities
+    },
+    computed: {
+        filteredCities: function () {
+            if (this.googleSearch.length) {
+                const filtered = this.cities.filter((city) => city.name.toLowerCase().includes(this.googleSearch.toLowerCase()));
+                return filtered.slice(0, 10);
+            } else {
+                return []
+            }
+        }
     },
     methods: {
         onChange: function() {

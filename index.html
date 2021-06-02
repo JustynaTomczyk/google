@@ -9,6 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/results.css">
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+	<script src="cities.js"></script>
 </head>
 
 <script type="module">
@@ -17,6 +18,10 @@
 
 <body>
 	<div  v-bind:class="{ results: googleSearch }" id="wrapper">
+		<li v-for="city in filteredCities">
+			{{ city.name }}
+		</li>
+
 		<div class="strona-wynikow">
 			<header> 
 				<div id="nav-bar">
